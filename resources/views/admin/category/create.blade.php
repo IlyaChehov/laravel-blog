@@ -10,7 +10,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
                         <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Главная</a></li>
-                        <li class="breadcrumb-item">Категории</li>
+                        <li class="breadcrumb-item">Создание категории</li>
                     </ol>
                 </div>
             </div>
@@ -25,7 +25,9 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="title" class="form-label">Название</label>
-                                <input value="{{ old('title') }}" name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title" aria-describedby="Название">
+                                <input value="{{ old('title') }}" name="title" type="text"
+                                       class="form-control @error('title') is-invalid @enderror" id="title"
+                                       aria-describedby="Название">
                                 @error('title')
                                 <div id="title" class="invalid-feedback">
                                     {{ $message }}
@@ -34,7 +36,9 @@
                             </div>
                             <div class="mb-3">
                                 <label for="meta_desc" class="form-label">SEO категории</label>
-                                <textarea name="meta_desc" id="meta_desc" class="form-control @error('meta_desc') is-invalid @enderror" aria-label="With textarea">{{ old('meta_desc') }}</textarea>
+                                <textarea name="meta_desc" id="meta_desc"
+                                          class="form-control @error('meta_desc') is-invalid @enderror"
+                                          aria-label="With textarea">{{ old('meta_desc') }}</textarea>
                                 @error('meta_desc')
                                 <div id="meta_desc" class="invalid-feedback">
                                     {{ $message }}
@@ -43,7 +47,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Создать</button>
+                            <button type="submit" class="btn btn-warning">Создать</button>
                         </div>
                     </form>
                 </div>

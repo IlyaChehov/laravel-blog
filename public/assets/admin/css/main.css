@@ -1,0 +1,11 @@
+/*.cke_notification_message {*/
+/*    display: none;*/
+/*}*/
+
+/*.cke_wysiwyg_frame.cke_reset html {*/
+/*    display: none;*/
+/*}*/
+
+.cke_notification.cke_notification_warning {
+    display: none;
+}

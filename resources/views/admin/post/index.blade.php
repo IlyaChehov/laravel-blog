@@ -29,9 +29,10 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th class="w-50">Название</th>
-                                <th class="w-50">Краткое описание</th>
-                                <th class="w-25">Просмотры</th>
+                                <th>Название</th>
+                                <th>Краткое описание</th>
+                                <th>Категория</th>
+                                <th>Просмотры</th>
                                 <th class="text-center" style="width: 40px;">Действия</th>
                             </tr>
                             </thead>
@@ -41,11 +42,12 @@
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->title }}</td>
                                     <td>{{ $post->excerpt }}</td>
+                                    <td>{{ $post->category->title }}</td>
                                     <td>{{ $post->views }}</td>
                                     <td class="d-flex gap-2">
-                                        <a href="{{ route('admin.category.edit', $post) }}"
+                                        <a href="{{ route('admin.post.edit', $post) }}"
                                            class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i></a>
-                                        <form action="{{ route('admin.category.destroy', $post) }}" method="post">
+                                        <form action="{{ route('admin.post.destroy', $post) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-outline-danger">
